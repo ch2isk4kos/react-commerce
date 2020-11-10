@@ -1,6 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+// import Navigation from './components/Navigation';
 import AddProduct from './components/AddProduct';
 import Cart from './components/Cart';
 import Login from './components/Login';
@@ -36,6 +37,7 @@ class App extends React.Component {
       >
         <Router ref={this.routerRef}>
           <div className="App">
+            {/* <Navigation data={{...this.state}} /> */}
             <Switch>
               <Route exact path="/" component={ProductList} />
               <Route exact path="/login" component={Login} />
