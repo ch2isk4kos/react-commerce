@@ -2,14 +2,14 @@ import React from 'react';
 import Context from './Context';
 
 const withContext = WrappedComponent => {
-  const withHOC = props => {
+  const WithHOC = props => {
     return (
       <Context.Consumer>
         { context => <WrappedComponent {...props} context={context} /> }
       </Context.Consumer>
     );
   };
-  return withHOC
-}
+  return WithHOC
+};
 
 export default withContext;
